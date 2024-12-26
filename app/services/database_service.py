@@ -4,7 +4,7 @@ from app.models import Collections
 
 def get_uncategorized_articles():
     dp = mongo_client.get_database()
-    return list(dp[Collections.UNCATEGORIZED].find({"isCategorised": False}))
+    return list(dp[Collections.UNCATEGORIZED].find({"isCategorized": False}))
 
 
 def save_categorized_articles(articles):
